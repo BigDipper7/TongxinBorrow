@@ -21,6 +21,10 @@ import android.widget.TextView;
 
 import com.eva.me.tongxinborrow.R;
 import com.eva.me.tongxinborrow.adapter.MainPagerAdapter;
+import com.eva.me.tongxinborrow.fragment.BorrowFragment;
+import com.eva.me.tongxinborrow.fragment.FenQiFragment;
+import com.eva.me.tongxinborrow.fragment.LoanFragment;
+import com.eva.me.tongxinborrow.fragment.MyInfoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,10 +60,14 @@ public class MainActivity extends AppCompatActivity {
 
         //init data
         List<Fragment> mFragmentList = new ArrayList<>();
-        mFragmentList.add(PlaceholderFragment.newInstance(0));
-        mFragmentList.add(PlaceholderFragment.newInstance(1));
-        mFragmentList.add(PlaceholderFragment.newInstance(2));
-        mFragmentList.add(PlaceholderFragment.newInstance(3));
+        mFragmentList.add(new BorrowFragment());
+        mFragmentList.add(new LoanFragment());
+        mFragmentList.add(new FenQiFragment());
+        mFragmentList.add(new MyInfoFragment());
+//        mFragmentList.add(PlaceholderFragment.newInstance(0));
+//        mFragmentList.add(PlaceholderFragment.newInstance(1));
+//        mFragmentList.add(PlaceholderFragment.newInstance(2));
+//        mFragmentList.add(PlaceholderFragment.newInstance(3));
 
 
         //init main pagerview adapter
@@ -114,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
+    @Deprecated
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -150,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
+    @Deprecated
     public static class PlaceholderFragment extends Fragment {
         /**
          * The fragment argument representing the section number for this
