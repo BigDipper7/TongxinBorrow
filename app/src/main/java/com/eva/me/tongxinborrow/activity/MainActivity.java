@@ -22,6 +22,9 @@ import android.widget.TextView;
 import com.eva.me.tongxinborrow.R;
 import com.eva.me.tongxinborrow.adapter.MainPagerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -51,9 +54,21 @@ public class MainActivity extends AppCompatActivity {
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
+        //init data
+        List<Fragment> mFragmentList = new ArrayList<>();
+        mFragmentList.add(PlaceholderFragment.newInstance(0));
+        mFragmentList.add(PlaceholderFragment.newInstance(1));
+        mFragmentList.add(PlaceholderFragment.newInstance(2));
+        mFragmentList.add(PlaceholderFragment.newInstance(3));
+
+
+        //init main pagerview adapter
+        mMainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(), mFragmentList, MainActivity.this);
+
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
+//        mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setAdapter(mMainPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);

@@ -1,8 +1,11 @@
 package com.eva.me.tongxinborrow.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.eva.me.tongxinborrow.R;
 
 import java.util.List;
 
@@ -11,10 +14,12 @@ import java.util.List;
  */
 public class MainPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> mData = null;
+    private Context mConext = null;
 
-    public MainPagerAdapter(FragmentManager fm, List<Fragment> mData) {
+    public MainPagerAdapter(FragmentManager fm, List<Fragment> mData, Context context) {
         super(fm);
         this.mData = mData;
+        this.mConext = context;
     }
 
     /**
@@ -37,6 +42,23 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        switch (position) {
+            case 0:
+                return mConext.getString(R.string.page_0);
+//                break;
+            case 1:
+                return mConext.getString(R.string.page_1);
+//                break;
+            case 2:
+                return mConext.getString(R.string.page_2);
+//                break;
+            case 3:
+                return mConext.getString(R.string.page_3);
+//                break;
+            default:
+                return null;
+//                break;
+        }
+//        return null;
     }
 }
