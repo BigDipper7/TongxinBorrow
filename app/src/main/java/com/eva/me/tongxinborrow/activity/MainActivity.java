@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.eva.me.tongxinborrow.R;
+import com.eva.me.tongxinborrow.adapter.MainPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    private MainPagerAdapter mMainPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
