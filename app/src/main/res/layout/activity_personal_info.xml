@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="请输入姓名："
                 android:id="@+id/textView" />
 
             <EditText
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="请输入手机号："
                 android:id="@+id/textView2" />
 
             <EditText
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="输入验证码："
                 android:id="@+id/textView3" />
 
             <LinearLayout
@@ -68,6 +68,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="10"
                     android:id="@+id/editText3" />
 
                 <ImageView
@@ -81,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="输入短信验证码："
                 android:id="@+id/textView4" />
 
             <LinearLayout
@@ -99,8 +100,10 @@
                 <Button
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="New Button"
+                    android:layout_height="30dp"
+                    android:padding="3dp"
+                    android:background="@drawable/search_btn_bg"
+                    android:text="获取验证码"
                     android:id="@+id/button" />
 
             </LinearLayout>
@@ -109,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="请输入密码："
                 android:id="@+id/textView5" />
 
             <EditText
@@ -123,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="请再次输入密码："
                 android:id="@+id/textView6" />
 
             <EditText
@@ -136,18 +139,24 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
+                    android:layout_weight="1"
+                    android:text="返回"
                     android:id="@+id/button2" />
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
+                    android:layout_weight="1"
+                    android:text="下一步"
                     android:id="@+id/button3" />
             </LinearLayout>
 
