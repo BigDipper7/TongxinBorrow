@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.eva.me.tongxinborrow.R;
+import com.eva.me.tongxinborrow.adapter.ContactsListAdapter;
+import com.eva.me.tongxinborrow.module.FenQiListItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by eva on 16-3-27.
@@ -15,6 +20,8 @@ import com.eva.me.tongxinborrow.R;
 public class FenQiFragment extends BaseFragment {
     private View mRootView;
     private Context mContext;
+    private ContactsListAdapter contactsListAdapter;
+    private List<FenQiListItem> mData;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,6 +30,11 @@ public class FenQiFragment extends BaseFragment {
         mRootView = LayoutInflater.from(mContext).inflate(R.layout.fragment_fenqi,
                 (ViewGroup) getActivity().findViewById(R.id.main_content), false);
 
+        mData = new ArrayList<>();
+        FenQiListItem item0=new FenQiListItem(0,"GRE 冲刺班", "￥2380.00 (￥199.00 * 12期)");
+        mData.add(item0);
+
+        contactsListAdapter = new ContactsListAdapter(mContext, mData);
     }
 
     @Nullable
