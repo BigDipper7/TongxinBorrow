@@ -8,20 +8,26 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.eva.me.tongxinborrow.R;
 
 public class LoanFragment extends BaseFragment {
     private View mRootView;
     private Context mContext;
+    private ListView listView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //init context
         mContext = getContext();
+        //init root view
         mRootView = LayoutInflater.from(mContext).inflate(R.layout.fragment_loan,
                 (ViewGroup) getActivity().findViewById(R.id.main_content), false);
+        listView = (ListView) mRootView.findViewById(R.id.loan_list_view);
 
+        //
     }
 
     @Nullable
