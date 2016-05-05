@@ -38,17 +38,21 @@ public class LoanFragment extends BaseFragment {
         //init data
         mData = new ArrayList<>();
 
-        LoanInfoItem item0 = new LoanInfoItem("[普通贷款]","￥220 元","2016-04-01 13：00");
-        LoanInfoItem item1 = new LoanInfoItem("[快速贷款]","￥200 元","2016-04-04 12：00");
-        LoanInfoItem item2 = new LoanInfoItem("[快速贷款]","￥100 元","2016-04-10 14：40");
-        LoanInfoItem item3 = new LoanInfoItem("[普通贷款]","￥1000 元","2016-04-11 12：00");
-        LoanInfoItem item4 = new LoanInfoItem("[普通贷款]","￥890 元","2016-04-13 1：00");
+        LoanInfoItem item0 = new LoanInfoItem("普通贷款","￥220 元","2016-04-01 13：00");
+        LoanInfoItem item1 = new LoanInfoItem("快速贷款","￥200 元","2016-04-04 12：00");
+        LoanInfoItem item2 = new LoanInfoItem("快速贷款","￥100 元","2016-04-10 14：40");
+        LoanInfoItem item3 = new LoanInfoItem("普通贷款","￥1000 元","2016-04-11 12：00");
+        LoanInfoItem item4 = new LoanInfoItem("普通贷款","￥890 元","2016-04-13 15：00");
+        LoanInfoItem item5 = new LoanInfoItem("普通贷款","￥120 元","2016-04-19 11：00");
+        LoanInfoItem item6 = new LoanInfoItem("普通贷款","￥230 元","2016-04-23 14：00");
 
         mData.add(item0);
         mData.add(item1);
         mData.add(item2);
         mData.add(item3);
         mData.add(item4);
+        mData.add(item5);
+        mData.add(item6);
 
 
         mLoanListAdapter = new LoanListAdapter(mContext,mData);
